@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    color: white;
+    max-width: max-content;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: max-content;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+}
+
+.actions li {
+  display: inline;
+  list-style-type: none;
+  padding: 0px;
+
+  font-size: 1.2em;
+}
+
+.actions ul {   
+    padding-inline-start: 0px;
+    text-align: center;
+}
+
+a {
+    color: #222;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #fff;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: white;
+    background: black;
+}
