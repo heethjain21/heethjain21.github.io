@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+
+:root {
+  --accent: #38b6ff;
+  --white: #ffffff;
+  --black: #000000;
+  --light: #fefefe;
+  --dark: #111827;
+  --dark-grey: #222222;
+  --text-light: #dddddd;
+  --text-dark: #222222;
+  --card-background-light: #f7f7f7;
+  --card-background-dark: #2e3039;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  transition: all .20s;
+  font-family: 'DM Sans', 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.body-about {
+  display: flex;
+  align-items: start !important;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+
+.dark{
+  background-color: var(--dark);
+  color: white;
+}
+
+.theme{
+    background-color: #cdccff;
+}
+
+.dark .theme{
+    background-color: #38b6ff;
+}
+
+.shadow{
+  box-shadow: 0px 0px 5px #888888;
+}
+
+.dark .shadow{
+  box-shadow: 0px 0px 5px #000000;
+}
+
+.my-navbar{
+  float: left;
+  display: inline-block;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 15px;
+  z-index:1;
+  background-color: #ffffff;
+}
+
+.dark .my-navbar {
+  background-color: var(--dark);
+}
+
+.button {
+  background-color: var(--accent);
+  border: 1px solid  var(--accent);
+  color: white;
+  outline: none;
+  border-radius: .25rem;
+  padding: .5rem 1.75rem;
+}
+
+.button:hover {
+    background-color: var(--white);
+    color: var(--dark);
+    border: 1px solid var(--dark);
+}
+
+.dark .button:hover {
+    background-color: var(--dark);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.toggle{
+  transform: scale(1.1);
+  position: relative;
+  width: 25px;
+  height:10px;
+  appearance: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.toggle:before{
+  content: '';
+  position: absolute;
+}
+
+.dark .toggle:before{
+  box-shadow: 0px 0px 5px #222222;
+  background-color: var(--accent);
+}
+
+.toggle:checked:before{
+  left:15px;
+}
+
+.my-navbar a button{
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  vertical-align: top;
+}
+
+.my-navbar a button:hover {
+  opacity: .5;
+}
+
+.my-navbar a button img {
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
+.title {
+  font-size:18px;
+  letter-spacing: 0.5px;
+  margin: 5px;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.a-title{
+  padding: 5px 0px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.dark .a-title{
+  color: #ffffff;
+}
+
+.my-navbar a:not(.logo):not(.a-title){
+  text-decoration: none;
+  padding: 5px 15px;
+  color: var(--text-dark);
+}
+
+.dark .my-navbar a:not(.logo):not(.a-title){
+  color: var(--text-light);
+}
+
+.my-navbar ul{
+  float: right;
+  margin-right: 20px;
+  list-style: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.my-navbar ul li{
+  display: inline-block;
+  padding: 5px 5px;
+  border-radius: 15px;
+}
+
+.my-navbar a.active:not(.logo):not(.a-title), .my-navbar a:hover:not(.logo):not(.a-title){
+  color: var(--accent)
+}
+
+.themeChange {
+  float: right;
+  margin-top: 6px;
+  margin-right: 30px;
+  display: block !important;
+}
+
+.hamburger{
+  display:none;
+}
+
+.hamburgerIcon {
+  float:right;
+  margin-top: 10px;
+  margin-right: 30px;
+  display: none !important;
+}
+
+.hamburgerIcon:hover{
+  transform: scale(1.025);
+}
+
+
+.container {
+  max-width: max-content;
+  margin: 60px 50px 0px 50px;
+  padding: 50px 110px 50px 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.container img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 33px;
+  height: 30px;
+}
+
+.container p {
+  text-align: left;
+  font-size: 18px;
+  color: #111111;
+}
+
+.dark .container p {
+  color: #fefefe;
+}
+
+.container h2 {
+    text-align: center;
+    display: flex;
+    margin: 5px;
+}
+
+.container ul {
+  margin: 20px;
+  font-weight: 500;
+}
+
+.container .actions li {
+  display: inline;
+  list-style-type: none;
+  padding: 0px;
+  font-size: 1.2em;
+}
+
+.container .actions ul {   
+    padding-inline-start: 0px;
+    text-align: center;
+    margin: 10px;
+}
+
+.container .icon {
+    color: white;
+    width: 24px;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 100%;
+    background: black;
+    transition: 0.5s;
+}
+
+.dark .container .icon {
+  color: black;
+  background: white;
+}
+
+.container .icon:hover {
+  background: var(--accent);
+  color: var(--dark);
+}
+
+.dark .container .icon:hover {
+    background: var(--accent);
+    color: var(--light);
+}
+
+.container .link {
+  color: black;
+  text-decoration: none;
+}
+
+.dark .container .link {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 920px) {
+  .container {
+    padding: 60px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    padding: 40px 20px 20px 20px;
+    margin: 60px 30px 30px 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 10px 10px 10px;
+    margin: 60px 20px 20px 20px;
+  }
+}
+
+
+@media (min-width: 500px) {
+  .my-navbar ul{
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 500px){
+
+  .themeChange {
+    margin-top: 8px;
+    margin-right: 20px;
+  }
+
+  .container .icon {
+    padding: 6px;
+  }
+
+  .hamburgerIcon{
+    float:right;
+    margin-top: 10px;
+    margin-right: 30px;
+    display:block !important;
+  }
+
+  .my-navbar ul{
+    position:fixed;
+    width: 100%;
+    margin-top: 10px;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+
+    background-color: white;
+    box-shadow: 0px 5px 10px #f8f8f8;
+  }
+
+  .dark .my-navbar ul{
+    box-shadow: 0px 5px 10px #000000;
+    background-color: var(--dark);
+  }
+
+  .my-navbar ul li{
+    display:block;
+    padding: 15px 0px;
+  }
+
+}
+
+@media (max-width: 280px){
+
+  .themeChange {
+    margin-top: 8px;
+    margin-right: 10px;
+  }
+
+  .hamburgerIcon{
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+}
